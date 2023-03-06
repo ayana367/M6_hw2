@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_End"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:text="@string/text"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_photo"
+        android:layout_width="@dimen/rv"
+        android:layout_height="@dimen/rv"
+        android:layout_marginTop="@dimen/mar_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cv_dio"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:spanCount="3"
+        tools:listitem="@layout/photo_item" />
+
+
+    <TextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="@dimen/layout_w"
+        android:layout_height="@dimen/layout_h"
+        android:layout_marginStart="@dimen/m_S"
+        android:layout_marginTop="@dimen/m_Top"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/tv_gallery"
+        android:background="@drawable/gallery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_dio"
+        android:layout_width="@dimen/l_w"
+        android:layout_height="@dimen/l_h"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/cv_dio_bottom"
+        app:cardCornerRadius="@dimen/cardCorner_R"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_dio"
+            android:layout_width="@dimen/layout_wh"
+            android:layout_height="@dimen/layout_ht"
+            android:layout_marginStart="@dimen/layout_marginS"
+            android:layout_marginTop="@dimen/layout_marginT"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tS" />
+
+        <Button
+            android:id="@+id/btn_dio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/btn_dio"
+            android:layout_marginStart="@dimen/btn_dio_top"
+            android:text="@string/ready"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_s" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

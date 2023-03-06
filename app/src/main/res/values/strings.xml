@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">M6_hw2</string>
+    <string name="todo">TODO</string>
+    <string name="text">Выбор фотографий</string>
+    <string name="title">Выбранные фотографий</string>
+    <string name="ready">Готово</string>
+    <string name="selected">\Выбрано \</string>
+    <string name="photographs">\ фотографий\</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
